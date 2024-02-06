@@ -13,6 +13,7 @@ import os
 
 # function to genrate value inside the yearly data array
 def generate_data(year):
+    np.random.seed(seed_value)  # Set seed for random number generation
     return [
         {
             "year": str(2022 - i),
@@ -32,9 +33,11 @@ def generate_data(year):
         } for i in range(year)
     ]
 
+seed_value = int(input("Enter seed value: "))
+np.random.seed(seed_value)  # Set seed for NumPy random number generator
 
 # Get the current working directory
-current_directory = os.getcwd()
+current_directory = os.path.dirname(os.path.abspath(__file__))
 
 # Assuming 'dataDemographics.xlsx' is in the current directory
 demographics_path = os.path.join(current_directory, 'dataDemographics.xlsx')
