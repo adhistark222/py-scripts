@@ -61,7 +61,7 @@ Enter seed value:
 ## Schema
 **Schema for Patient Demographics** <br>
 <br>
-```json
+```console 
 {
     code: {
       // patient code i.e a string used to categorize but for now we use numbering
@@ -94,7 +94,7 @@ Enter seed value:
 **Schema for Demographics Stats**<br>
 <br>
 
-```json
+```console
 {
     yearId: String,
     coMorbidity: Number,
